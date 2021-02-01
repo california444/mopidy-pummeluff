@@ -65,7 +65,8 @@ class TagReader(Thread):
                 now = time()
                 uid = self.read_uid()
 
-                if now - prev_time > 1 or uid != prev_uid:
+                #if now - prev_time > 1 or uid != prev_uid:
+                if uid != prev_uid:
                     LOGGER.info('Tag %s read', uid)
                     self.handle_uid(uid)
 
@@ -106,12 +107,12 @@ class TagReader(Thread):
         try:
             action = REGISTRY[str(uid)]
             LOGGER.info('Triggering action of registered tag')
-            play_sound('success.wav')
+            play_sound('success.mp3')
             action(self.core)
 
         except KeyError:
             LOGGER.info('Tag is not registered, thus doing nothing')
-            play_sound('fail.wav')
+            play_sound('fail.mp3')
             action = Action(uid=uid)
 
         action.scanned   = time()

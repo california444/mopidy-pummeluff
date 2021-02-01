@@ -27,4 +27,6 @@ class Shutdown(Action):
         :param mopidy.core.Core core: The mopidy core instance
         '''
         LOGGER.info('Shutting down')
+        system('/usr/local/bin/pivoyager enable power-wakeup')
+        system('/usr/local/bin/pivoyager watchdog 25')
         system('sudo /sbin/shutdown -h now')
