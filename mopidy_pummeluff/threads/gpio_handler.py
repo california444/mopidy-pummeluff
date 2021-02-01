@@ -12,7 +12,7 @@ from time import time
 
 from RPi import GPIO  # pylint: disable=import-error
 
-from mopidy_pummeluff import actions
+from mopidy_pummeluff.actions import Shutdown, PlayPause, Stop, PreviousTrack, NextTrack, VolumeUp, VolumeDown
 from mopidy_pummeluff.sound import play_sound
 
 LOGGER = getLogger(__name__)

@@ -11,6 +11,8 @@ __all__ = (
     'Tracklist',
     'ToggleShuffle',
     'Volume',
+    'VolumeUp',
+    'VolumeDown',
 )
 
 from .playback import NextTrack, PlayPause, PreviousTrack, Stop
