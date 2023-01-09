@@ -3,12 +3,14 @@ Mopidy Pummeluff Python module.
 '''
 
 import os
-
+import pkg_resources
 import mopidy
 import pkg_resources
 
 from .frontend import PummeluffFrontend
 from .web import ActionsHandler, LatestHandler, RegisterHandler, RegistryHandler, UnregisterHandler
+
+__version__ = pkg_resources.get_distribution('Mopidy-Pummeluff').version
 
 __version__ = pkg_resources.get_distribution('Mopidy-Pummeluff').version
 
