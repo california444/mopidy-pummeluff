@@ -13,7 +13,7 @@ with open('requirements_dev.txt') as f:
 
 setup(
     name='Mopidy-Pummeluff',
-    use_scm_version=True,
+    version=1.0.0
     url='https://github.com/confirm/mopidy-pummeluff',
     license='MIT',
     author='confirm IT solutions',
