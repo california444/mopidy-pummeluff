@@ -14,6 +14,8 @@ __version__ = pkg_resources.get_distribution('Mopidy-Pummeluff').version
 
 __version__ = pkg_resources.get_distribution('Mopidy-Pummeluff').version
 
+__version__ = pkg_resources.get_distribution('Mopidy-Pummeluff').version
+
 
 def app_factory(config, core):  # pylint: disable=unused-argument
     '''

@@ -8,7 +8,3 @@ Copy of original Pumeluff repo with following changes:
 - Support for Volume down and Volume up (eg via buttons), but not used
 - integrated pivoyager into shutdown procedure if RFID tag for shutdown action is read
 - changed sound file format to mp3
-<<<<<<< HEAD
-=======
-
->>>>>>> dc5aa7b (01.02.2021)
