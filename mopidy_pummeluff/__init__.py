@@ -12,11 +12,6 @@ from .web import ActionsHandler, LatestHandler, RegisterHandler, RegistryHandler
 
 __version__ = pkg_resources.get_distribution('Mopidy-Pummeluff').version
 
-__version__ = pkg_resources.get_distribution('Mopidy-Pummeluff').version
-
-__version__ = pkg_resources.get_distribution('Mopidy-Pummeluff').version
-
-
 def app_factory(config, core):  # pylint: disable=unused-argument
     '''
     App factory for the web apps.

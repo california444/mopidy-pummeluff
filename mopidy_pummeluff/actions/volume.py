@@ -84,39 +84,3 @@ class VolumeDown(Action):
         else:
             core.mixer.stes_volume(0)
             LOGGER.info('Setting volume to 0')
-
-class VolumeUp(Action):
-    '''
-    sets the volume up by 5%
-    '''
-    @classmethod
-    def execute(cls, core):
-        '''
-        Set volume of the mixer.
-        '''
-        number = int(core.mixer.get_volume())
-        if (number < 95):
-            number = number + 5
-            LOGGER.info('Setting volume to %s', number)
-            core.mixer.set_volume(number)
-        else:
-            core.mixer.stes_volume(100)
-            LOGGER.info('Setting volume to 100')
-
-class VolumeDown(Action):
-    '''
-    sets the volume down by 5%
-    '''
-    @classmethod
-    def execute(cls, core):
-        '''
-        Set volume of the mixer.
-        '''
-        number = int(core.mixer.get_volume())
-        if (number > 5):
-            number = number - 5
-            LOGGER.info('Setting volume to %s', number)
-            core.mixer.set_volume(number)
-        else:
-            core.mixer.stes_volume(0)
-            LOGGER.info('Setting volume to 0')
