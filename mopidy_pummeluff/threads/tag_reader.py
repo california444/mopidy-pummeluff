@@ -48,7 +48,7 @@ class TagReader(Thread):
         super().__init__()
         self.core       = core
         self.stop_event = stop_event
-        self.rfid       = RFID()
+        self.rfid       = RFID(pin_mode=RPi.GPIO.BCM, pin_rst=25, pin_irq=24)
 
     def run(self):
         '''
