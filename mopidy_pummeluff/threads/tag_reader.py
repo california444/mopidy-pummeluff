@@ -59,6 +59,9 @@ class TagReader(Thread):
         prev_uid  = ''
 
         while not self.stop_event.is_set():
+            #TODO figure out that wait_for_tag does not return is the rfid card stays on the reader
+            # use forked version of pirc522 with timeout flag
+            # rfid.wait_for_tag(timeout=2)
             rfid.wait_for_tag()
 
             try:
@@ -67,7 +70,9 @@ class TagReader(Thread):
                 continue
 
             now = time()
-            if now - prev_time > 1 or uid != prev_uid:
+            #if now - prev_time > 1 or uid != prev_uid:
+            # as RFID reader reads permamently, checking the time diff fires always after the time diff
+            if uid != prev_uid:
                 LOGGER.info('Tag %s read', uid)
                 self.handle_uid(uid)
 
